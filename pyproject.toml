@@ -1,0 +1,14 @@
+[project]
+name = "code-langchain"
+version = "0.1.0"
+description = "Coursera Course - Langchain Develop AI Agents with LangChain & LangGraph"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "black>=25.11.0",
+    "isort>=7.0.0",
+    "langchain>=1.1.0",
+    "langchain-nvidia-ai-endpoints>=1.0.0",
+    "langchain-openai>=1.1.0",
+    "python-dotenv>=1.2.1",
+]
