@@ -15,13 +15,13 @@ load_dotenv()
 
 class Source(BaseModel):
     """ Schema for a source used by the agent """
-    title: str = Field(description="The title of the source")
-    url: str = Field(description="The URL of the source")
+    title: str | None = Field(description="The title of the source")
+    url: str | None = Field(description="The URL of the source")
 
 class AgentResponse(BaseModel):
     """ Schema for the agent's response with answer and sources"""
-    answer: str = Field(description="The answer to the query")
-    sources: list[Source] = Field(default_factory=list, description="List of sources used to generate the answer")
+    answer: str | None = Field(description="The answer to the query")
+    sources: list[Source] | None = Field(default_factory=list, description="List of sources used to generate the answer")
 
 tavily = TavilyClient(api_key=os.environ.get("TAVILY_API_KEY"))
 
